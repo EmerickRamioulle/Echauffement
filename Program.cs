@@ -14,7 +14,7 @@ class Program
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
         Console.WriteLine("What's your name and how old are you?");
             string prenom = Console.ReadLine();
-            int age = Convert.ToInt32(Console.ReadLine);
+            int age = Convert.ToInt32(Console.ReadLine());
 
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
