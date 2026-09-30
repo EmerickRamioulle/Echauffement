@@ -7,6 +7,7 @@ class Program
         /*
          * Consigne générale : faites un commit entre chaque étape !
          */
+        //
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
         Console.WriteLine("Hello, My name is Emerick and my favourite game is Ultrakill");
