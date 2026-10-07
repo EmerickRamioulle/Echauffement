@@ -10,17 +10,17 @@ class Program
         //
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
-        Console.WriteLine("Bonjour, Mon nom est Emerick et mon jeu préféré est Ultrakill");
+            Console.WriteLine("Bonjour, Mon nom est Emerick et mon jeu préféré est Ultrakill");
 
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
-        Console.WriteLine("Qu'elle est ton nom ? ");
-            string name = Console.ReadLine();
-        Console.WriteLine("Qu'elle est ton age ? ");
-            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Qu'elle est ton nom ? ");
+                string name = Console.ReadLine();
+            Console.WriteLine("Qu'elle est ton age ? ");
+                int age = Convert.ToInt32(Console.ReadLine());
 
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
-        if (age < 18)
+        if (age <= 18)
         {
             Console.WriteLine("Tu es mineur");
         }
@@ -30,30 +30,42 @@ class Program
         }
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
             Console.WriteLine("Combien d'euro as-tu ? ");
-                float money = float.Parse(Console.Readline());
+                int money = Convert.ToInt32(Console.ReadLine());
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
             Console.WriteLine("Choisis une des armes ! ");
-            Console.WriteLine("Arme 1 50.50 euros");
-            Console.WriteLine("Arme 2 40.65 euros");
-            Console.WriteLine("Arme 3 90.47 euros");
-            Console.WriteLine("Arme 4 77.12 euros");
+            Console.WriteLine("Arme 1 50 euros");
+            Console.WriteLine("Arme 2 40 euros");
+            Console.WriteLine("Arme 3 90 euros");
+            Console.WriteLine("Arme 4 77 euros");
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
             Console.WriteLine("choisis l'une de ces 4 armes en indiquant un nombre entre 1 et 4 ! ");
                 int choix = Convert.ToInt32(Console.ReadLine()); 
-                float prix = 0;
-            if (choix == 1) prix = 50.50f;
-            else (choix == 2) prix = 40.65f;
-            else (choix == 3) prix = 90.47f;
-            else (choix == 4) prix = 77.12f;
+                int prix = 0;
+        if (choix == 1)
+        {
+            prix = 50;
+        }
+        else if (choix == 2)
+        {
+            prix = 40;
+        } 
+        else if (choix == 3)
+        { 
+            prix = 90;
+        }
+        else if (choix == 4) 
+        {
+            prix = 77;
+        }
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
-            if (money >= prix) ;
+        if (money >= prix && age >= 18) 
         {
             Console.WriteLine("Achat effectué avec succès !");
         }
-            else
+        else
         {
             Console.WriteLine("Votre achat n'a pas pu être effectuer.");
         }
